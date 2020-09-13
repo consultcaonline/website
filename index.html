@@ -75,26 +75,63 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </button>  
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="index.html">Home</a></li>
+                <!-- <li class="nav-item" ><a class="nav-link smooth-scroll" href="index.html">Home</a></li> -->
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="about.html">About Us</a>
-                    <a class="dropdown-item" href="careers.html">Career Oprtunity</a>
                     <a class="dropdown-item" href="team.html">Meet Our Team</a>
                     <a class="dropdown-item" href="faq.html">FAQ</a>
                     <a class="dropdown-item" href="testimonials.html">Testimonials</a>
                   </div>
                 </li>
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="services.html">Services</a></li> 
                 <li class="nav-item dropdown" >
-                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a> 
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business Registration</a> 
+                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="news-list.html">Company Registration</a>
+                    <a class="dropdown-item" href="news-grid.html">Firm Registration</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GST</a> 
+                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="news-list.html">GST Registration</a>
+                    <a class="dropdown-item" href="news-grid.html">GST Filing</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business License</a> 
+                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="news-list.html">MSME Registration</a>
+                    <a class="dropdown-item" href="news-grid.html">Import Export Code</a>
+                    <a class="dropdown-item" href="news-list.html">FSSAI Registration</a>
+                    <a class="dropdown-item" href="news-grid.html">Gumasta License</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Annual Service</a> 
+                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="news-list.html">Income Tax Filing</a>
+                    <a class="dropdown-item" href="news-grid.html">LLP Annual Filing</a>
+                    <a class="dropdown-item" href="news-grid.html">Company Annual Filing</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">IPR Service</a> 
+                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="news-list.html">Patent</a>
+                    <a class="dropdown-item" href="news-grid.html">Trademark Registration</a>
+                  </div>
+                </li>
+                <!-- <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact.html">Contact Us</a></li>  -->
+                <!-- <li class="nav-item" ><a class="nav-link smooth-scroll" href="services.html">Services</a></li>  -->
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="news-list.html">News list layouts</a>
                     <a class="dropdown-item" href="news-grid.html">News grid layouts</a>
                     <a class="dropdown-item" href="news-details.html">News Details</a> 
                     <a class="dropdown-item" href="project.html">Project</a>
-                    <a class="dropdown-item" href="contact.html">Contact Us</a>
                     <a class="dropdown-item" href="comming-soon.html">Comming Soon</a>
                     <a class="dropdown-item" href="pricing.html">Pricing Tables</a>
                     <a class="dropdown-item" href="admin/404.html">404</a>
@@ -104,8 +141,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                   <i class="search fa fa-search search-btn"></i>
                   <div class="search-open">
                     <div class="input-group animated fadeInUp">
-                      <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
-                      <span class="input-group-addon" id="basic-addon2">Go</span>
+                      <form class="form-inline mr-auto" action="http://www.google.com/search" method="get">
+                        <input type="hidden" name="q" value="site:https://ankurbadola.github.io/srranka">
+                        <input type="text" name="q" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+                        <button class="btn btn-general btn-green wow fadeInUp" id="basic-addon2" type="submit" formtarget="_blank">Go</button>
+                      </form>
                     </div>
                   </div>
                 </li> 
@@ -215,11 +255,15 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               <div class="slide-1"></div>
                 <div class="hero ">
                   <hgroup class="wow fadeInUp">
-                      <h1>We Help <span ><a href="" class="typewrite" data-period="2000" data-type='[ " Business", " Startup"]'>
-                        <span class="wrap"></span></a></span> </h1>        
-                      <h3>The next big idea is waiting for its next big changer</h3>
+                      <h1>We Help With</h1>
+                      <h2>
+                        <span>
+                          <a href="" class="typewrite" data-period="1000" data-type='[ " Tax", " Audit", " Compliance", " Registrations"]'><span class="wrap"></span></a>
+                        </span>
+                      </h2>
+                      <h3>Online services in India For all Start-Ups, Businesses and Partnerships</h3>
                   </hgroup>
-                  <button class="btn btn-general btn-green wow fadeInUp" role="button">Contact Now</button>
+                  <button class="btn btn-general btn-green wow fadeInUp" role="button" type="button" onsubmit="$('#login-modal').show">Contact Now</button>
                 </div>           
             </div> 
         </div> 
@@ -235,8 +279,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           <div class="col-md-12">
             <h1 class="wow fadeInUp">We committed to helping</h1>
             <div class="heading-border"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.</p>
-            <div class="title-but"><button class="btn btn-general btn-green" role="button">Read More</button></div>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">
+              We are providing online and offline services to take care of all tax & compliance for your business with upfront transparent pricing.
+
+Our objective is to help businesses with legal and financial matters so that you can focus on building up your business.
+<!-- BOOK KEEPING, TAX FILING, LEGAL REGISTRATIONS, COMPANY COMPLIANCE, ROC FILING, AUDIT SERVICES, TAX ADVISORY, GST FILING. -->
+            </p>
+            <div class="title-but"><a href="about.html" class="btn btn-general btn-green">Read More</a></div>
           </div>
         </div>
       </div>  
@@ -271,7 +320,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 <!--====================================================
                         OFFER
 ======================================================-->
-    <section id="comp-offer">
+    <!-- <section id="comp-offer">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
@@ -321,12 +370,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 <!--====================================================
                      WHAT WE DO
 ======================================================-->
-    <section class="what-we-do bg-gradiant">
+    <!-- <section class="what-we-do bg-gradiant">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
@@ -382,12 +431,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </div>
         </div>
       </div>      
-    </section> 
+    </section>  -->
 
 <!--====================================================
                       STORY
 ======================================================--> 
-    <section id="story">
+    <!-- <section id="story">
         <div class="container">
           <div class="row title-bar">
             <div class="col-md-12">
@@ -443,12 +492,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             </div>                        
           </div>
         </div>  
-    </section>
+    </section> -->
 
 <!--====================================================
                   COMPANY THOUGHT
 ======================================================-->
-    <div class="overlay-thought"></div>
+    <!-- <div class="overlay-thought"></div>
     <section id="thought" class="bg-parallax thought-bg">
       <div class="container">
         <div id="thought-desc" class="row title-bar title-bar-thought owl-carousel owl-theme">
@@ -464,12 +513,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </div>
         </div>
       </div>         
-    </section> 
+    </section>  -->
     
 <!--====================================================
                    SERVICE-HOME
 ======================================================--> 
-    <section id="service-h">
+    <!-- <section id="service-h">
         <div class="container-fluid">
           <div class="row" >
             <div class="col-md-6" >
@@ -502,7 +551,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             </div>
           </div>
         </div>  
-    </section>
+    </section> -->
 
 <!--====================================================
                       CLIENT
@@ -549,23 +598,19 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           <div class="col-md-6">
             <div class="contact-h-cont">
               <h3 class="cl-white">Continue The Conversation</h3><br>
-              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/14lh6MIQOy9j3jWzEl7BysxEe4p9OoU9WN3tytbQjj1I/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeOCU200ovcy84f-TR33LclbgoUBH2IVbOwhvn1Byq2zSg3xw/viewform?" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="form-group cl-white">
-                  <label for="name">Your Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name"> 
+                  <label for="name">Company Name</label>
+                  <input type="text" class="form-control" id="entry.2005620554" aria-describedby="nameHelp" placeholder="Enter name"> 
                 </div>  
                 <div class="form-group cl-white">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
+                  <input type="email" class="form-control" id="entry.1045781291" aria-describedby="emailHelp" placeholder="Enter email"> 
                 </div>  
                 <div class="form-group cl-white">
-                  <label for="subject">Subject</label>
-                  <input type="text" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject"> 
+                  <label for="subject">Phone Number</label>
+                  <input type="tel" class="form-control" id="entry.1166974658" aria-describedby="telHelp" placeholder="Enter number"> 
                 </div>  
-                <div class="form-group cl-white">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
                 <button class="btn btn-general btn-white" role="button" type="submit">
                   <i fa fa-right-arrow></i>
                   GET CONVERSATION
@@ -576,11 +621,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               <script type="text/javascript">
               $('#gform').on('submit', function(e) {
                 $('#gform *').fadeOut(2000);
-                $('#gform').prepend('Your submission has been processed...');
+                $('#gform').prepend('Your details have been processed...');
                 });
               </script>
               
-              <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}"></iframe>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
             </div>
           </div>
         </div>
@@ -594,7 +639,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3 col-sm-6  desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
-            <h2>Latest News</h2>
+            <h2>Latest Articles</h2>
             <div class="heading-border-light"></div> 
             <button class="btn btn-general btn-green" role="button">See More</button>
           </div>
