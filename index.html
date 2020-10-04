@@ -26,7 +26,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-select.css" />
+</head>
 
   <body id="page-top">
 
@@ -171,7 +173,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                               <li><a href="#" target="_empty"><i class="fa top-social fa-linkedin"></i></a></li>
                               <!-- <li><a href="#" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
                               <li><a href="#" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li>  -->
-                              <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>  
+                              <!-- <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>   -->
                             </ul>
                           </div>
                         </div>
@@ -186,64 +188,77 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     </header> 
 
 <!--====================================================
-                    LOGIN OR REGISTER
+                    CONTACT
 ======================================================-->
-    <section id="login">
-      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header" align="center">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span class="fa fa-times" aria-hidden="true"></span>
-                      </button>
-                  </div>
-                  <div id="div-forms">
-                      <form id="login-form">
-                          <h3 class="text-center">Login</h3>
-                          <div class="modal-body">
-                              <label for="username">Username</label> 
-                              <input id="login_username" class="form-control" type="text" placeholder="Enter username " required>
-                              <label for="username">Password</label> 
-                              <input id="login_password" class="form-control" type="password" placeholder="Enter password" required>
-                              <div class="checkbox">
-                                  <label>
-                                      <input type="checkbox"> Remember me
-                                  </label>
-                              </div>
+  
+<section id="contact" >
+  <div class="modal fade bg-parallax" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+          <div class="modal-content"> <!-- contact-h-cont -->
+              <div class="modal-header" align="center">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span class="fa fa-times" aria-hidden="true"></span>
+                  </button>
+              </div>
+              <div id="div-forms">
+                  <form id="contact-form" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeOCU200ovcy84f-TR33LclbgoUBH2IVbOwhvn1Byq2zSg3xw/viewform?" target="hidden_iframe" onsubmit="submitted=true;">
+                      <h3 class="text-center">Continue the conversation</h3>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="entry.2005620554">Company Name</label> 
+                          <input id="entry.2005620554" class="form-control" type="text" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="entry.1045781291">Email Address</label> 
+                          <input id="entry.1045781291" class="form-control" type="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="entry.1166974658">Phone Number</label>
+                          <input type="tel" class="form-control" id="entry.1166974658" aria-describedby="telHelp" placeholder="Enter number"> 
+                        </div>
+                        <div class="form-group">
+                          <label for="entry.530130259">Services</label>
+                          <select id="entry.530130259" class="form-control selectpicker" title="Please select" form="contact-form" multiple required data-live-search="true">
+                            <option>Company Registration</option>
+                            <option>Firm Registration</option>
+                            <option>GST Registration</option>
+                            <option>GST Filing</option>
+                            <option>MSME Registration</option>
+                            <option>Import Export Code</option>
+                            <option>FSSAI Registration</option>
+                            <option>Gumasta License</option>
+                            <option>Income Tax Filing</option>
+                            <option>LLP Annual Filing</option>
+                            <option>Company Annual Filing</option>
+                            <option>Patent</option>
+                            <option>Trademark Registration</option>
+                          </select>
                           </div>
-                          <div class="modal-footer text-center">
-                              <div>
-                                  <button type="submit" class="btn btn-general btn-white">Login</button>
-                              </div>
-                              <div>
-                                  <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
-                              </div>
+                      </div>
+                      <div class="modal-footer text-center">
+                          <div>
+                              <button role="button" type="submit" class="btn btn-general btn-white">Submit</button>
                           </div>
-                      </form>
-                      <form id="register-form" style="display:none;">
-                          <h3 class="text-center">Register</h3>
-                          <div class="modal-body"> 
-                              <label for="username">Username</label> 
-                              <input id="register_username" class="form-control" type="text" placeholder="Enter username" required>
-                              <label for="register_email">E-mailId</label> 
-                              <input id="register_email" class="form-control" type="text" placeholder="Enter eMail" required>
-                              <label for="register_password">Password</label> 
-                              <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                          <div>
+                              <button type="button" class="btn btn-general btn-green">Reset</button>
                           </div>
-                          <div class="modal-footer">
-                              <div>
-                                  <button type="submit" class="btn btn-general btn-white">Register</button>
-                              </div>
-                              <div>
-                                  <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
+                      </div>
+                  </form>
+                  <script src="js/jquery/jquery.min.js"></script>
+                  <script type="text/javascript">var submitted=false;</script>
+                  <script type="text/javascript">
+                  $('#contact-form').on('submit', function(e) {
+                    $('#contact-form *').fadeOut(2000);
+                    $('#contact-form').prepend('<h4>Your details have been processed...</h4>');
+                    });
+                  </script>
+                  
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
               </div>
           </div>
       </div>
-    </section>      
+  </div>
+</section>      
 
 <!--====================================================
                          HOME
@@ -265,7 +280,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </h2>
                       <h3>Online services in India For all Start-Ups, Businesses and Partnerships</h3>
                   </hgroup>
-                  <button class="btn btn-general btn-green wow fadeInUp" role="button" type="button" onsubmit="$('#login-modal').show">Contact Now</button>
+                  <button class="btn btn-general btn-green wow fadeInUp" role="button" type="button" data-toggle="modal" data-target="#contact-modal">Contact Now</button>
                 </div>           
             </div> 
         </div> 
@@ -591,49 +606,6 @@ Our objective is to help businesses with legal and financial matters so that you
       </div>        
     </section>  
 
-<!--====================================================
-                    CONTACT HOME
-======================================================-->
-    <div class="overlay-contact-h"></div>
-    <section id="contact-h" class="bg-parallax contact-h-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="contact-h-cont">
-              <h3 class="cl-white">Continue The Conversation</h3><br>
-              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeOCU200ovcy84f-TR33LclbgoUBH2IVbOwhvn1Byq2zSg3xw/viewform?" target="hidden_iframe" onsubmit="submitted=true;">
-                <div class="form-group cl-white">
-                  <label for="name">Company Name</label>
-                  <input type="text" class="form-control" id="entry.2005620554" aria-describedby="nameHelp" placeholder="Enter name"> 
-                </div>  
-                <div class="form-group cl-white">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="entry.1045781291" aria-describedby="emailHelp" placeholder="Enter email"> 
-                </div>  
-                <div class="form-group cl-white">
-                  <label for="subject">Phone Number</label>
-                  <input type="tel" class="form-control" id="entry.1166974658" aria-describedby="telHelp" placeholder="Enter number"> 
-                </div>  
-                <button class="btn btn-general btn-white" role="button" type="submit">
-                  <i fa fa-right-arrow></i>
-                  GET CONVERSATION
-                </button>
-              </form>
-              <script src="js/jquery/jquery.min.js"></script>
-              <script type="text/javascript">var submitted=false;</script>
-              <script type="text/javascript">
-              $('#gform').on('submit', function(e) {
-                $('#gform *').fadeOut(2000);
-                $('#gform').prepend('Your details have been processed...');
-                });
-              </script>
-              
-              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>         
-    </section> 
 
 <!--====================================================
                        NEWS
@@ -785,9 +757,13 @@ Our objective is to help businesses with legal and financial matters so that you
     <script src="js/wow/wow.min.js"></script>
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
 
+    <script src="js/bootstrap/bootstrap-select.min.js"></script>
+
     <!-- Plugin JavaScript -->
     <script src="js/jquery-easing/jquery.easing.min.js"></script> 
     <script src="js/custom.js"></script> 
+
+    
   </body>
 
 </html>
