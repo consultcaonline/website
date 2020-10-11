@@ -118,6 +118,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
     (function($) {
 
+        var $formContact = $('#contact-form');
+        var $formConfirm = $('#confirm-form');
         var $formLogin = $('#login-form');
         var $formRegister = $('#register-form');
         var $divForms = $('#div-forms');
@@ -148,6 +150,10 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     }
                     return false;
                     break;
+                case "contact-form":
+                    modalAnimate($formContact, $formConfirm)
+                    return true;
+                    break;
                 default:
                     return false;
             }
@@ -156,7 +162,19 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         
         $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
         $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); }); 
-        
+
+        var htContact = 0
+        $('#contact-modal').on('shown.bs.modal', function () {
+            htContact = $divForms.height()
+        });
+
+        $('#contact-modal').on('hidden.bs.modal', function () {
+            $divForms.height(htContact)
+            $formConfirm.hide(0, function() {
+                $formContact.show()
+            })
+        });
+
         function modalAnimate ($oldForm, $newForm) {
             var $oldH = $oldForm.height();
             var $newH = $newForm.height();

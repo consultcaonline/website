@@ -195,30 +195,30 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <div class="modal fade bg-parallax" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
           <div class="modal-content"> <!-- contact-h-cont -->
-              <div class="modal-header" align="center">
+              <div class="modal-header text-center" align="center">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span class="fa fa-times" aria-hidden="true"></span>
                   </button>
               </div>
               <div id="div-forms">
-                  <form id="contact-form" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeOCU200ovcy84f-TR33LclbgoUBH2IVbOwhvn1Byq2zSg3xw/viewform?" target="hidden_iframe" onsubmit="submitted=true;">
+                  <form id="contact-form" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeOCU200ovcy84f-TR33LclbgoUBH2IVbOwhvn1Byq2zSg3xw/formResponse?" target="hidden_iframe" onload="submitted=false;" onsubmit="submitted=true;">
                       <h3 class="text-center">Continue the conversation</h3>
                       <div class="modal-body">
                         <div class="form-group">
-                          <label for="entry.2005620554">Company Name</label> 
-                          <input id="entry.2005620554" class="form-control" type="text" placeholder="Enter name" required>
+                          <label for="company_name">Company Name</label> 
+                          <input id="company_name" name="entry.2005620554" class="form-control" type="text" placeholder="Enter name" required>
                         </div>
                         <div class="form-group">
-                          <label for="entry.1045781291">Email Address</label> 
-                          <input id="entry.1045781291" class="form-control" type="email" placeholder="Enter email" required>
+                          <label for="email_address">Email Address</label> 
+                          <input id="email_address" name="entry.1045781291" class="form-control" type="email" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                          <label for="entry.1166974658">Phone Number</label>
-                          <input type="tel" class="form-control" id="entry.1166974658" aria-describedby="telHelp" placeholder="Enter number"> 
+                          <label for="phone_number">Phone Number</label>
+                          <input id="phone_number" name="entry.1166974658" type="tel" class="form-control" placeholder="Enter number"> 
                         </div>
                         <div class="form-group">
-                          <label for="entry.530130259">Services</label>
-                          <select id="entry.530130259" class="form-control selectpicker" title="Please select" form="contact-form" multiple required data-live-search="true">
+                          <label for="services">Services</label>
+                          <select id="services" name="entry.530130259" class="form-control selectpicker" title="Please select" form="contact-form" multiple required data-live-search="true">
                             <option>Company Registration</option>
                             <option>Firm Registration</option>
                             <option>GST Registration</option>
@@ -240,21 +240,24 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                               <button role="button" type="submit" class="btn btn-general btn-white">Submit</button>
                           </div>
                           <div>
-                              <button type="button" class="btn btn-general btn-green">Reset</button>
+                            <input type="reset" class="btn btn-general btn-green"/>
                           </div>
                       </div>
+                      <input type="hidden" name="draftResponse" value="[]">
+                      <input type="hidden" name="pageHistory" value="0">
                   </form>
-                  <script src="js/jquery/jquery.min.js"></script>
+                  <form id="confirm-form" style="display:none;">
+                    <h3 class="text-center">Thank You!</h3>
+                    <div class="modal-body">
+                      <h4>We will get back to you soon</h4>
+                    </div>
+                    <div class="modal-footer text-center">
+                    </div>
+                  </form>
                   <script type="text/javascript">var submitted=false;</script>
-                  <script type="text/javascript">
-                  $('#contact-form').on('submit', function(e) {
-                    $('#contact-form *').fadeOut(2000);
-                    $('#contact-form').prepend('<h4>Your details have been processed...</h4>');
-                    });
-                  </script>
-                  
-                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-              </div>
+                    
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { $('#contact-form')[0].reset(); }"></iframe>
+                </div>
           </div>
       </div>
   </div>
